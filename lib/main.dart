@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // component imports
 import 'chip_list.dart';
 import 'card.dart';
+import 'shorts.dart';
 
 void main() => runApp(const Youtube());
 
@@ -63,6 +64,7 @@ class Youtube extends StatelessWidget {
                   metaData:
                       'BDLegend - Clash of Clans · 3.2K views · 2 hours ago',
                 ),
+                Shorts(),
                 CustomCard(
                   avatarSrc: 'images/avatar1.jpeg',
                   title: 'Valorant updates are coming...',
