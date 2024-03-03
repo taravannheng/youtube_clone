@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // component imports
 import 'chip_list.dart';
+import 'card.dart';
 
 void main() => runApp(const Youtube());
 
@@ -17,6 +18,7 @@ class Youtube extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
+          backgroundColor: almostBlack,
           appBar: AppBar(
             backgroundColor: almostBlack,
             leading: Image.asset(
@@ -46,11 +48,20 @@ class Youtube extends StatelessWidget {
               ),
             ],
           ),
-          body: Column(
-            children: [
-              ChipList(),
-            ],
-          ),
+          body: ListView(children: [
+            Column(
+              children: [
+                ChipList(),
+                SizedBox(
+                  height: 8,
+                ),
+                CustomCard(),
+                CustomCard(),
+                CustomCard(),
+                CustomCard(),
+              ],
+            ),
+          ]),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor: white,
             unselectedItemColor: white,
