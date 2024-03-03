@@ -44,7 +44,25 @@ class Youtube extends StatelessWidget {
             ],
           ),
           // body: ,
-          // bottomNavigationBar: ,
+          bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor: white,
+            unselectedItemColor: white,
+            backgroundColor: almostBlack,
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.subscriptions_outlined),
+                label: 'Subscriptions',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle_outlined),
+                label: 'You',
+              ),
+            ],
+          ),
         ),
       ),
     );
