@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// component imports
+import 'chip_list.dart';
+
 void main() => runApp(const Youtube());
 
 class Youtube extends StatelessWidget {
@@ -43,7 +46,11 @@ class Youtube extends StatelessWidget {
               ),
             ],
           ),
-          // body: ,
+          body: Column(
+            children: [
+              ChipList(),
+            ],
+          ),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor: white,
             unselectedItemColor: white,
