@@ -1,8 +1,21 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key});
+  final String avatarSrc;
+  final String imgSrc;
+  final String title;
+  final String metaData;
+
+  // Constructor that requires three parameters
+  const CustomCard({
+    Key? key,
+    required this.avatarSrc,
+    required this.imgSrc,
+    required this.title,
+    required this.metaData,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +30,7 @@ class CustomCard extends StatelessWidget {
           color: Colors.amber,
           height: 200,
           child: Image.asset(
-            'images/coc1.jpeg',
+            imgSrc,
             fit: BoxFit.cover,
           ),
         ),
@@ -27,7 +40,7 @@ class CustomCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
-                backgroundImage: AssetImage('images/avatar.jpeg'),
+                backgroundImage: AssetImage(avatarSrc),
               ),
               Expanded(
                 child: Column(
@@ -37,7 +50,7 @@ class CustomCard extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Text(
-                        'Proof Your Archer Queen Equipment Priority is Wrong...',
+                        title,
                         softWrap: true,
                         style: TextStyle(
                           color: white,
@@ -51,7 +64,7 @@ class CustomCard extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Text(
-                        'BDLegend - Clash of Clans · 3.2K views · 2 hours ago',
+                        metaData,
                         softWrap: true,
                         style: TextStyle(
                           color: Colors.white60,
