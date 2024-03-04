@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 // utils imports
-import './utils/colors/ytcolors.dart';
+import '../utils/colors/ytcolors.dart';
 
 class CustomCard extends StatelessWidget {
   final String avatarSrc;

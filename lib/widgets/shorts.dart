@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // utils imports
-import './utils/colors/ytcolors.dart';
+import '../utils/colors/ytcolors.dart';
 
 class Shorts extends StatelessWidget {
   const Shorts({super.key});

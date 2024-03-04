@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // utils imports
-import './utils/colors/ytcolors.dart';
+import '../utils/colors/ytcolors.dart';
 
 class ChipList extends StatelessWidget {
   const ChipList({super.key});

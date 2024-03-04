@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 // component imports
-import 'chip_list.dart';
-import 'card.dart';
-import 'shorts.dart';
+import 'widgets/chip_list.dart';
+import 'widgets/card.dart';
+import 'widgets/shorts.dart';
 
 // utils imports
 import './utils/colors/ytcolors.dart';
