@@ -7,6 +7,7 @@ import 'widgets/shorts.dart';
 
 // utils imports
 import './utils/colors/ytcolors.dart';
+import './utils/mock_data/mock_data.dart';
 
 void main() => runApp(const Youtube());
 
@@ -58,32 +59,19 @@ class Youtube extends StatelessWidget {
                   height: 8,
                 ),
                 CustomCard(
-                  avatarSrc: 'images/avatar.jpeg',
-                  title:
-                      'Proof Your Archer Queen Equipment Priority is Wrong...',
-                  imgSrc: 'images/coc1.jpeg',
-                  metaData:
-                      'BDLegend - Clash of Clans · 3.2K views · 2 hours ago',
+                  avatarSrc: cardMockData[0]['avatarSrc'],
+                  title: cardMockData[0]['title'],
+                  imgSrc: cardMockData[0]['imgSrc'],
+                  metaData: cardMockData[0]['metaData'],
                 ),
                 Shorts(),
-                CustomCard(
-                  avatarSrc: 'images/avatar1.jpeg',
-                  title: 'Valorant updates are coming...',
-                  imgSrc: 'images/valorant.jpeg',
-                  metaData: 'VMasters · 1.3K views · 1 hour ago',
-                ),
-                CustomCard(
-                  avatarSrc: 'images/avatar2.jpeg',
-                  title: 'Show off your strats - defeat your enemies!',
-                  imgSrc: 'images/dota.jpeg',
-                  metaData: 'Dota2 Official · 4.5K views · 3 hours ago',
-                ),
-                CustomCard(
-                  avatarSrc: 'images/avatar3.jpeg',
-                  title: 'CS2 is here...',
-                  imgSrc: 'images/cs2.jpeg',
-                  metaData: 'Counter Strike Official · 1K views · 12 hours ago',
-                ),
+                for (int i = 1; i <= 3; i++)
+                  CustomCard(
+                    avatarSrc: cardMockData[i]['avatarSrc'],
+                    title: cardMockData[i]['title'],
+                    imgSrc: cardMockData[i]['imgSrc'],
+                    metaData: cardMockData[i]['metaData'],
+                  ),
               ],
             ),
           ]),
