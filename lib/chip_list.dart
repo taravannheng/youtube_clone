@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// utils imports
+import './utils/colors/ytcolors.dart';
+
 class ChipList extends StatelessWidget {
   const ChipList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Color almostBlack = Color.fromRGBO(40, 40, 40, 1);
-    Color lightBlack = Color.fromRGBO(60, 60, 60, 1);
-    Color white = Color.fromRGBO(255, 255, 255, 1);
-    Color youtubeRed = Color.fromRGBO(255, 0, 0, 1);
+    YTColors ytColors = YTColors();
 
     List chipListLabels = [
       'All',
@@ -25,7 +25,7 @@ class ChipList extends StatelessWidget {
     ];
 
     return Container(
-      color: almostBlack,
+      color: ytColors.almostBlack,
       height: 56,
       child: Column(
         children: [
@@ -35,13 +35,13 @@ class ChipList extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: lightBlack,
+                    color: ytColors.lightBlack,
                   ),
                   width: 56,
                   height: 40,
                   child: IconButton(
                     style: ButtonStyle(
-                      iconColor: MaterialStateProperty.all(white),
+                      iconColor: MaterialStateProperty.all(ytColors.white),
                     ),
                     icon: Icon(Icons.explore_outlined),
                     onPressed: () {},
@@ -60,13 +60,15 @@ class ChipList extends StatelessWidget {
                       return ChoiceChip(
                         label: Text(chipListLabels[index]),
                         labelStyle: TextStyle(
-                          color: index == 0 ? almostBlack : white,
+                          color: index == 0
+                              ? ytColors.almostBlack
+                              : ytColors.white,
                         ),
                         selected: index == 0 ? true : false,
                         showCheckmark: false,
-                        selectedColor: white,
+                        selectedColor: ytColors.white,
                         onSelected: (bool selected) {},
-                        backgroundColor: lightBlack,
+                        backgroundColor: ytColors.lightBlack,
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) =>

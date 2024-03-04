@@ -5,6 +5,9 @@ import 'chip_list.dart';
 import 'card.dart';
 import 'shorts.dart';
 
+// utils imports
+import './utils/colors/ytcolors.dart';
+
 void main() => runApp(const Youtube());
 
 class Youtube extends StatelessWidget {
@@ -12,16 +15,14 @@ class Youtube extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color almostBlack = Color.fromRGBO(40, 40, 40, 1);
-    Color white = Color.fromRGBO(255, 255, 255, 1);
-    Color youtubeRed = Color.fromRGBO(255, 0, 0, 1);
+    YTColors ytColors = YTColors();
 
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: almostBlack,
+          backgroundColor: ytColors.almostBlack,
           appBar: AppBar(
-            backgroundColor: almostBlack,
+            backgroundColor: ytColors.almostBlack,
             leading: Image.asset(
               'images/yt_logo_rgb_dark.png',
             ),
@@ -30,21 +31,21 @@ class Youtube extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(
                   Icons.cast_outlined,
-                  color: white,
+                  color: ytColors.white,
                 ),
               ),
               IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.notifications_outlined,
-                  color: white,
+                  color: ytColors.white,
                 ),
               ),
               IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.search,
-                  color: white,
+                  color: ytColors.white,
                 ),
               ),
             ],
@@ -87,9 +88,9 @@ class Youtube extends StatelessWidget {
             ),
           ]),
           bottomNavigationBar: BottomNavigationBar(
-            selectedItemColor: white,
-            unselectedItemColor: white,
-            backgroundColor: almostBlack,
+            selectedItemColor: ytColors.white,
+            unselectedItemColor: ytColors.white,
+            backgroundColor: ytColors.almostBlack,
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled),

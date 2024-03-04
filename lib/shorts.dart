@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+// utils imports
+import './utils/colors/ytcolors.dart';
+
 class Shorts extends StatelessWidget {
   const Shorts({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Color almostBlack = Color.fromRGBO(40, 40, 40, 1);
-    Color white = Color.fromRGBO(255, 255, 255, 1);
-    Color youtubeRed = Color.fromRGBO(255, 0, 0, 1);
+    YTColors ytColors = YTColors();
 
     return Column(
       children: [
@@ -26,7 +27,7 @@ class Shorts extends StatelessWidget {
             Text(
               'Shorts',
               style: TextStyle(
-                color: white,
+                color: ytColors.white,
                 fontWeight: FontWeight.w600,
                 fontSize: 24,
               ),
@@ -61,7 +62,7 @@ class Shorts extends StatelessWidget {
                       'Never miss new updates...',
                       softWrap: true,
                       style: TextStyle(
-                          color: white,
+                          color: ytColors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     ),
@@ -95,7 +96,7 @@ class Shorts extends StatelessWidget {
                       'Valorant valorant valorant!!!',
                       softWrap: true,
                       style: TextStyle(
-                          color: white,
+                          color: ytColors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     ),
@@ -133,7 +134,7 @@ class Shorts extends StatelessWidget {
                       'Halloween season challenges are here...',
                       softWrap: true,
                       style: TextStyle(
-                          color: white,
+                          color: ytColors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     ),
@@ -167,7 +168,7 @@ class Shorts extends StatelessWidget {
                       'CS2 New version of Counter Strike',
                       softWrap: true,
                       style: TextStyle(
-                          color: white,
+                          color: ytColors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     ),

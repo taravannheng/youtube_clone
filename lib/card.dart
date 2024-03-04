@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+// utils imports
+import './utils/colors/ytcolors.dart';
+
 class CustomCard extends StatelessWidget {
   final String avatarSrc;
   final String imgSrc;
@@ -19,9 +22,7 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color almostBlack = Color.fromRGBO(40, 40, 40, 1);
-    Color white = Color.fromRGBO(255, 255, 255, 1);
-    Color youtubeRed = Color.fromRGBO(255, 0, 0, 1);
+    YTColors ytColors = YTColors();
 
     return Column(
       children: [
@@ -53,7 +54,7 @@ class CustomCard extends StatelessWidget {
                         title,
                         softWrap: true,
                         style: TextStyle(
-                          color: white,
+                          color: ytColors.white,
                         ),
                       ),
                     ),
@@ -75,7 +76,7 @@ class CustomCard extends StatelessWidget {
                 ),
               ),
               IconButton(
-                color: white,
+                color: ytColors.white,
                 onPressed: () {},
                 icon: Icon(Icons.more_vert_outlined),
               )
