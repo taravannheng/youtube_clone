@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 // component imports
 import '../widgets/chip_list.dart';
 import '../widgets/card.dart';
-import '../widgets/shorts.dart';
+import '../widgets/channel_list.dart';
 
 // utils imports
 import '../utils/colors/ytcolors.dart';
 import '../utils/mock_data/mock_data.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class SubscriptionScreen extends StatelessWidget {
+  const SubscriptionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
       body: ListView(children: [
         Column(
           children: [
+            YTChannelList(),
             ChipList(),
             SizedBox(
               height: 8,
@@ -31,7 +32,6 @@ class HomeScreen extends StatelessWidget {
               imgSrc: cardMockData[0]['imgSrc'],
               metaData: cardMockData[0]['metaData'],
             ),
-            Shorts(),
             for (int i = 1; i <= 3; i++)
               CustomCard(
                 avatarSrc: cardMockData[i]['avatarSrc'],
