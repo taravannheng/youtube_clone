@@ -5,4 +5,5 @@ class YTColors {
   Color white = Color.fromRGBO(255, 255, 255, 1);
   Color lightBlack = Color.fromRGBO(60, 60, 60, 1);
   Color youtubeRed = Color.fromRGBO(255, 0, 0, 1);
+  Color youtubeBlue = Color.fromRGBO(0, 80, 255, 1);
 }
