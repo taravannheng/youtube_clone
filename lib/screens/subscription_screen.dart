@@ -22,7 +22,9 @@ class SubscriptionScreen extends StatelessWidget {
         Column(
           children: [
             YTChannelList(),
-            ChipList(),
+            ChipList(
+              hideExploreButton: true,
+            ),
             SizedBox(
               height: 8,
             ),

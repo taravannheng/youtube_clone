@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import '../utils/colors/ytcolors.dart';
 
 class ChipList extends StatelessWidget {
-  const ChipList({super.key});
+  final bool hideExploreButton;
+
+  const ChipList({
+    Key? key,
+    this.hideExploreButton = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,24 +37,29 @@ class ChipList extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: ytColors.lightBlack,
-                  ),
-                  width: 56,
-                  height: 40,
-                  child: IconButton(
-                    style: ButtonStyle(
-                      iconColor: MaterialStateProperty.all(ytColors.white),
-                    ),
-                    icon: Icon(Icons.explore_outlined),
-                    onPressed: () {},
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
+                hideExploreButton
+                    ? Container()
+                    : Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: ytColors.lightBlack,
+                        ),
+                        width: 56,
+                        height: 40,
+                        child: IconButton(
+                          style: ButtonStyle(
+                            iconColor:
+                                MaterialStateProperty.all(ytColors.white),
+                          ),
+                          icon: Icon(Icons.explore_outlined),
+                          onPressed: () {},
+                        ),
+                      ),
+                hideExploreButton
+                    ? Container()
+                    : SizedBox(
+                        width: 10,
+                      ),
                 Expanded(
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
